@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Person(
-	id int NOT NULL AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	first_name varchar(50) NOT NULL, 
 	last_name varchar(50) NOT NULL,
 	date_of_birth datetime default '2021-01-01 14:29:36',
@@ -15,14 +15,16 @@ CREATE TABLE IF NOT EXISTS Person(
 );
 
 CREATE TABLE IF NOT EXISTS GroupZone(
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name varchar(50) NOT NULL UNIQUE
 );
 
 # M-to-M table
 CREATE TABLE IF NOT EXISTS Person_GroupZone(
 	person_id INT NOT NULL,
-    group_zone_id INT NOT NULL
+    group_zone_id INT NOT NULL,
+    
+    PRIMARY KEY(person_id, group_zone_id)
 );
 
 CREATE TABLE IF NOT EXISTS PublicHealthCenter(
