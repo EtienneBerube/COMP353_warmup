@@ -1,0 +1,12 @@
+# Disable FK checks
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS Person;
+DROP TABLE IF EXISTS GroupZone;
+DROP TABLE IF EXISTS Person_GroupZone;
+DROP TABLE IF EXISTS PublicHealthCenter;
+DROP TABLE IF EXISTS PublicHealthWorker;
+DROP TABLE IF EXISTS Diagnostic;
+
+# Enable FK checks
+SET FOREIGN_KEY_CHECKS = 1;
