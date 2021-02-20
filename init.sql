@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS Person(
 	first_name varchar(50) NOT NULL, 
 	last_name varchar(50) NOT NULL,
 	date_of_birth datetime default '2021-01-01 14:29:36',
-	medicare_number INT NOT NULL, 
+	medicare_number INT NOT NULL UNIQUE, 
 	telephone_number varchar(10), 
 	address varchar(50) NOT NULL, 
 	city varchar(50) NOT NULL, 
