@@ -53,9 +53,13 @@ CREATE TABLE IF NOT EXISTS PublicHealthWorker(
 CREATE TABLE IF NOT EXISTS Diagnostic(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     covid_19_positive BIT NOT NULL,
-    date datetime default now(),
+    test_date datetime default now(),
+    result_date datetime,
     
-    person_id INT NOT NULL # TODO foreign key
+    # TODO foreign key
+    person_id INT NOT NULL,
+    center_id INT NOT NULL,
+    worker_id INT NOT NULL
 );
 
 
