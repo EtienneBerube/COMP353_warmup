@@ -34,9 +34,7 @@ CREATE TABLE IF NOT EXISTS PublicHealthCenter(
 	website varchar(50) NOT NULL,
     telephone_number varchar(10), 
 	address varchar(50) NOT NULL, 
-	facility_type varchar(50) NOT NULL,
-    
-    center_id int NOT NULL
+	facility_type varchar(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS PublicHealthWorker(
@@ -49,14 +47,15 @@ CREATE TABLE IF NOT EXISTS PublicHealthWorker(
 	email varchar(50) NOT NULL,
     is_tested bit NOT NULL,
     
-    center_id int NOT NULL
+    center_id int NOT NULL # TODO Foreign KEY
 );
 
 CREATE TABLE IF NOT EXISTS Diagnostic(
-	id INT NOT NULL AUTO_INCREMENT,
-    person_id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     covid_19_positive BIT NOT NULL,
-    date datetime default now()
+    date datetime default now(),
+    
+    person_id INT NOT NULL # TODO foreign key
 );
 
 
