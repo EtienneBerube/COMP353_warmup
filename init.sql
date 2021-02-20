@@ -12,7 +12,9 @@ CREATE TABLE IF NOT EXISTS Person(
 	citizenship varchar(50) default "Canadian", 
 	email varchar(50) NOT NULL,
     
-	parent INT # TODO do forign KEY
+	parent_id INT, 
+	FOREIGN KEY (parent_id) REFERENCES Person(id)
+		ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS GroupZone(
@@ -25,7 +27,15 @@ CREATE TABLE IF NOT EXISTS Person_GroupZone(
 	person_id INT NOT NULL,
     group_zone_id INT NOT NULL,
     
-    PRIMARY KEY(person_id, group_zone_id)
+    PRIMARY KEY(person_id, group_zone_id),
+    
+    FOREIGN KEY (person_id) 
+		REFERENCES Person(id)
+		ON DELETE CASCADE,
+	
+	FOREIGN KEY (group_zone_id) 
+		REFERENCES GroupZone(id)
+		ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS PublicHealthCenter(
@@ -47,7 +57,11 @@ CREATE TABLE IF NOT EXISTS PublicHealthWorker(
 	email varchar(50) NOT NULL,
     is_tested bit NOT NULL,
     
-    center_id int NOT NULL # TODO Foreign KEY
+    center_id int NOT NULL, 
+    
+    FOREIGN KEY (center_id) 
+		REFERENCES PublicHealthCenter(id)
+		ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Diagnostic(
@@ -56,10 +70,21 @@ CREATE TABLE IF NOT EXISTS Diagnostic(
     test_date datetime default now(),
     result_date datetime,
     
-    # TODO foreign key
     person_id INT NOT NULL,
     center_id INT NOT NULL,
-    worker_id INT NOT NULL
+    worker_id INT NOT NULL,
+    
+    FOREIGN KEY (center_id) 
+		REFERENCES PublicHealthCenter(id)
+		ON DELETE CASCADE,
+	
+	FOREIGN KEY (person_id) 
+		REFERENCES Person(id)
+		ON DELETE CASCADE,
+		
+	FOREIGN KEY (worker_id) 
+		REFERENCES PublicHealthWorker(id)
+		ON DELETE CASCADE
 );
 
 
