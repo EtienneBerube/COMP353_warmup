@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="diag">
+	<entities>
+		<data-source id="mysql8-177c0d48f09-75408d43779483fd">
+			<entity id="1" name="Diagnostic" fq-name="tec353_4.Diagnostic">
+				<path name="tec353_4"/>
+			</entity>
+			<entity id="2" name="GroupZone" fq-name="tec353_4.GroupZone">
+				<path name="tec353_4"/>
+			</entity>
+			<entity id="3" name="Person" fq-name="tec353_4.Person">
+				<path name="tec353_4"/>
+			</entity>
+			<entity id="4" name="Person_GroupZone" fq-name="tec353_4.Person_GroupZone">
+				<path name="tec353_4"/>
+			</entity>
+			<entity id="5" name="PublicHealthCenter" fq-name="tec353_4.PublicHealthCenter">
+				<path name="tec353_4"/>
+			</entity>
+			<entity id="6" name="PublicHealthWorker" fq-name="tec353_4.PublicHealthWorker">
+				<path name="tec353_4"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="Person_GroupZone_ibfk_2" fq-name="tec353_4.Person_GroupZone.Person_GroupZone_ibfk_2" type="fk" pk-ref="2" fk-ref="4"/>
+		<relation name="Diagnostic_ibfk_2" fq-name="tec353_4.Diagnostic.Diagnostic_ibfk_2" type="fk" pk-ref="3" fk-ref="1"/>
+		<relation name="Person_ibfk_1" fq-name="tec353_4.Person.Person_ibfk_1" type="fk" pk-ref="3" fk-ref="3"/>
+		<relation name="Person_GroupZone_ibfk_1" fq-name="tec353_4.Person_GroupZone.Person_GroupZone_ibfk_1" type="fk" pk-ref="3" fk-ref="4"/>
+		<relation name="Diagnostic_ibfk_1" fq-name="tec353_4.Diagnostic.Diagnostic_ibfk_1" type="fk" pk-ref="5" fk-ref="1"/>
+		<relation name="PublicHealthWorker_ibfk_1" fq-name="tec353_4.PublicHealthWorker.PublicHealthWorker_ibfk_1" type="fk" pk-ref="5" fk-ref="6"/>
+		<relation name="Diagnostic_ibfk_3" fq-name="tec353_4.Diagnostic.Diagnostic_ibfk_3" type="fk" pk-ref="6" fk-ref="1"/>
+	</relations>
+</diagram>
