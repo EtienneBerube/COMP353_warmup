@@ -1,6 +1,6 @@
 INSERT INTO Person(first_name, last_name, date_of_birth, medicare_number, telephone_number, address, city, province, postal_code, citizenship, email)
 VALUES ('Bob', 'Mckenzie', '1953-04-18 6:09:43', 1234567890, '8002672001', '24 Sussex Drive', 'Ottawa', 'Ontario', 'K1M1M4', 'Canadian', 'bob@bobndoug.ca' ),
- ('Doug', 'Mckenzie', '1949-05-20 7:10:44', 111111, '6139416900', '24 Sussex Drive', 'Ottawa', 'Ontario', 'K1M1M4', 'Canadian', 'doug@bobndoug.ca'),
+ ('Doug', 'Mckenzie', '1949-05-20 7:10:44', 111111, '6139416900', '95 Robert St.', 'Ottawa', 'Ontario', 'K1M1M4', 'Canadian', 'doug@bobndoug.ca'),
  ('William', 'Shatner', '1931-03-22 8:11:45', 222222, '1234567890', '4419 Av Girouard', 'Montreal', 'Quebec', 'H4A3E5', 'Canadian', 'Kirk@UnitedFederationOfPlanets.earth'),
  ('Celine', 'Dion', '1968-03-30 9:12:46', 333333, '2345678901', 'Chateau Frontnac', 'Quebec', 'Quebec', 'a1b2c3', 'Canadian', 'Celine@Dion.qc.ca'),
  ('Ryan', 'Reynolds', '1976-10-23 10:00:47', 444444, '3456789012', 'Rogers Arena', 'Vancouver', 'British Columbia', 'V6B6G1', 'Canadian', 'Deadpool@Marvel.com'),
