@@ -58,7 +58,7 @@ INSERT INTO Person_GroupZone(person_id, group_zone_id)
 SELECT ( SELECT id FROM Person WHERE first_name='Celine') AS person_id, (SELECT id FROM GroupZone WHERE name LIKE "QuebecCity%" LIMIT 1) As group_zone_id;
 
 INSERT INTO Person_GroupZone(person_id, group_zone_id)
-SELECT ( SELECT id FROM Person WHERE first_name='Ryan') AS person_id, (SELECT id FROM GroupZone WHERE name LIKE "Ottawa%" LIMIT 1) As group_zone_id;
+SELECT ( SELECT id FROM Person WHERE first_name='Ryan') AS person_id, (SELECT id FROM GroupZone WHERE name LIKE "MontrealPrimary%" LIMIT 1) As group_zone_id;
 
 INSERT INTO Person_GroupZone(person_id, group_zone_id)
 SELECT ( SELECT id FROM Person WHERE first_name='Ryan') AS person_id, (SELECT id FROM GroupZone WHERE name LIKE "RogersFriend%" LIMIT 1) As group_zone_id;
@@ -121,8 +121,8 @@ INSERT INTO Diagnostic (covid_19_positive, test_date ,result_date, person_id, ce
 VALUE (b'0', '2020-01-02 00:00:01', '2020-01-02 00:00:03', (select id from Person where first_name = 'Bob'), (select id from PublicHealthCenter where name like 'Beef%'), (select id from PublicHealthWorker where first_name ='Ernest')),
 (b'0', '2020-01-04 00:00:01', '2020-01-05 00:00:02', (select id from Person where first_name = 'Doug'), (select id from PublicHealthCenter where name like 'Chicken%'), (select id from PublicHealthWorker where first_name = 'Wilfred')),
 (b'0', '2020-01-06 00:00:01', '2020-01-07 00:00:02', (select id from Person where first_name = 'William'), (select id from PublicHealthCenter where name like 'Turkey%'), (select id from PublicHealthWorker where first_name = 'Norman')),
-(b'0', '2020-01-08 00:00:01', '2020-01-09 00:00:02', (select id from Person where first_name = 'Celine'), (select id from PublicHealthCenter where name like 'Duck%'), (select id from PublicHealthWorker where first_name = 'Emily')),
-(b'0', '2020-01-10 00:00:01', '2020-01-11 00:00:02', (select id from Person where first_name = 'Ryan'), (select id from PublicHealthCenter where name like 'Goose%'), (select id from PublicHealthWorker where first_name = 'William')),
+(b'1', '2020-01-08 00:00:01', '2020-01-09 00:00:02', (select id from Person where first_name = 'Celine'), (select id from PublicHealthCenter where name like 'Duck%'), (select id from PublicHealthWorker where first_name = 'Emily')),
+(b'1', '2020-01-10 00:00:01', '2020-01-11 00:00:02', (select id from Person where first_name = 'Ryan'), (select id from PublicHealthCenter where name like 'Goose%'), (select id from PublicHealthWorker where first_name = 'William')),
 (b'0', '2020-01-12 00:00:01', '2020-01-13 00:00:02', (select id from Person where first_name = 'Bobburt'), (select id from PublicHealthCenter where name like 'Pork%'), (select id from PublicHealthWorker where first_name = 'John')),
 (b'0', '2020-01-14 00:00:01', '2020-01-15 00:00:02', (select id from Person where first_name = 'Roger Jr.'), (select id from PublicHealthCenter where name like 'Mutton%'), (select id from PublicHealthWorker where first_name = 'Elizabeth')),
 (b'0', '2020-01-16 00:00:01', '2020-01-17 00:00:02', (select id from Person where first_name = 'Bobby'), (select id from PublicHealthCenter where name like 'Goat%'), (select id from PublicHealthWorker where first_name = 'Wilder')),
