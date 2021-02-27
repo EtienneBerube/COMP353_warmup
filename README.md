@@ -2,10 +2,10 @@
 
 TODO:
 
-- [ ] finish E/R 
+- [x ] finish E/R 
 
-- [ ] finish Table creation
+- [x ] finish Table creation
 
-- [ ] Add foreign Key
+- [x ] Add foreign Key
 
-- [ ] Add dummy data in another SQL script
+- [x ] Add dummy data in another SQL script
